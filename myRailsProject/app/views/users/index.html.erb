@@ -1,0 +1,18 @@
+<h1>Liste des utilisateurs</h1>
+
+
+<% @users.each do |user| %>
+<hr>
+    <tr>
+      <td><strong>Prénom : </strong><%= user.first_name%>, </td>
+      <td><strong>Nom : </strong> <%= user.last_name%>, </td>
+      <td><strong>Email : </strong> <%= user.email%>, </td>
+      <td> <%= link_to "details ...", user %> </td>
+      <br>
+      <hr>
+      <br>
+    </tr>
+<% end %>
+
+
+<%= link_to 'Ajouter un utilisateur', url_for([:new, :user]) %>

@@ -1,0 +1,16 @@
+<h1>Fiche utilisateur : </h1>
+
+<hr>
+
+<span>Prénom : </span><%= @user.first_name %> 
+<br>
+<span>Nom : </span><%= @user.last_name %>
+<br>
+<span>Email : </span><%= @user.email %>
+
+<hr>
+<br>
+<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', url_for([:edit, :user]) %>
+
+<%= link_to "Delete", @user, :confirm => "Are you sure?", :method => :delete %>
