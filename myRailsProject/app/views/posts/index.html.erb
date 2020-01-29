@@ -1,0 +1,17 @@
+<h1>Liste des articles :</h1>
+
+<% @posts.each do |post| %>
+<hr>
+    <tr>
+      <td><strong><%= post.title%> : </strong> </td>
+      <br>
+      <td><%= post.header%></td>
+      <br>
+      <td> <%= link_to "Voir plus", post %> </td>
+
+      <hr>      
+      <br>
+    </tr>
+<% end %>
+
+<%= link_to 'Ajouter un article', url_for([:new, :post]) %>

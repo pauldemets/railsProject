@@ -59,4 +59,8 @@ Rails.application.routes.draw do
     
   end
 
+  resources:posts do
+    
+  end
+
 end

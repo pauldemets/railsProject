@@ -1,0 +1,17 @@
+<h1>Ajouter un nouvel article</h1>
+
+<%= form_for(@post) do |f| %>
+
+
+Titre : <%= f.text_field :title %><br><br>
+En-tête : <%= f.text_field :header %><br><br>
+Contenu : <%= f.text_field :content %><br><br>
+
+
+<br>
+<%= f.submit %>
+<% end %>
+
+<br>
+
+<%= link_to "Retour", posts_path %>

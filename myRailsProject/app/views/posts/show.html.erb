@@ -1,0 +1,17 @@
+<%= link_to "Retour", url_for(:back) %>
+
+
+<h1>Détails de l'article : </h1>
+
+<hr>
+
+<%= @post.title %> 
+<br>
+<br>
+<%= @post.header %> 
+<br>
+<br>
+<%= @post.content %> 
+<hr>
+<p>Ecrit par :</p>
+<%= link_to @post.user.first_name + ' ' + @post.user.last_name, @post.user %>, le <%= @post.date %> 
