@@ -1,27 +1,26 @@
-<h1>Fiche utilisateur : </h1>
+<%= link_to 'Back', posts_path , :id => "button"%>
+<h1 id="title">Fiche utilisateur : </h1>
 
-<hr>
 
+<div id="userInfos">
 <span>Prénom : </span><%= @user.first_name %> 
 <br>
 <span>Nom : </span><%= @user.last_name %>
 <br>
 <span>Email : </span><%= @user.email %>
-
-<hr>
+</div>
 
 <h1>Liste des artcicles : </h1>
 <% @posts.each do |post| %>
-<hr>
+<div class="post">
     <tr>
       <td><strong><%= post.title%> : </strong> </td>
       <br>
       <td><%= post.header%></td>
       <br>
       <td> <%= link_to "détails", post %> </td>
-      <hr>      
       <br>
     </tr>
+    </div>
 <% end %>
 
-<%= link_to 'Back', posts_path %>

@@ -1,17 +1,22 @@
-<h1>Liste des articles :</h1>
+<%= stylesheet_link_tag "posts.scss" %>
 
-<% @posts.each do |post| %>
-<hr>
+<%= link_to 'Ajouter un article', url_for([:new, :post]), :id => "button" %>
+
+<h1 id="title">Liste des articles :</h1>
+
+<% @posts.each do |post|%>
     <tr>
+    <div class='post'>
       <td><strong><%= post.title%> : </strong> </td>
       <br>
       <td><%= post.header%></td>
       <br>
+      <%= image_tag post.image.thumb.url%>
+      <br>
+
       <td> <%= link_to "Voir plus", post %> </td>
 
-      <hr>      
-      <br>
+      </div>
     </tr>
 <% end %>
 
-<%= link_to 'Ajouter un article', url_for([:new, :post]) %>

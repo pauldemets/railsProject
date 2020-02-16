@@ -15,7 +15,7 @@ class PostsController < ApplicationController
         @post = Post.new
     end
     def create
-        post_params = params.require(:post).permit(:title,:header,:content)
+        post_params = params.require(:post).permit(:title,:header,:content,:image)
         @post = Post.new(post_params)
         @post.user_id = current_user.id
         @post.date = Date.current
