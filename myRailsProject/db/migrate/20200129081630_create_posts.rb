@@ -7,6 +7,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :header
       t.string :content
       t.date :date
+      t.image :string
      
       t.timestamps null: false
     end
